@@ -1,0 +1,195 @@
+<DOCTYPE html>
+<html>
+
+<head>
+  <!-- CSS only -->
+<meta charset="utf-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="tablero"></div>
+  <div id="a"></div>
+  <script>
+  var turno = 0;
+  for (var i=0; i<25; i++){
+    document.getElementById("tablero").innerHTML +=
+      '<button id="b'+i+'" onclick="Casilla(event)"  type="button"  class="btn btn-secondary btn-lg">🖤</button>'
+      if((i + 1 ) % 5 === 0){
+        document.getElementById("tablero").innerHTML += "<br>";
+      }
+document.getElementById("a").innerHTML = '<input type="button" value="Reset" onclick="location.reload()"/>'
+  }
+
+function Casilla(e){
+var nombre = e.target.id;
+if(turno === 0){ document.getElementById(nombre).innerHTML = "❤";}
+else{document.getElementById(nombre).innerHTML = "💙";}
+
+if(turno = ( turno + 1 ) % 2){document.getElementById(nombre).disable = true}
+
+
+GanadorRojo();
+GanadorAzul();
+}
+
+function GanadorRojo(){
+  //-----------------HORIZONTALES-----------------------------------------------
+if(document.getElementById("b0").innerHTML === "❤" &&
+document.getElementById("b1").innerHTML === "❤" &&
+document.getElementById("b2").innerHTML === "❤" &&
+document.getElementById("b3").innerHTML === "❤" &&
+document.getElementById("b4").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b5").innerHTML === "❤" &&
+document.getElementById("b6").innerHTML === "❤" &&
+document.getElementById("b7").innerHTML === "❤" &&
+document.getElementById("b8").innerHTML === "❤" &&
+document.getElementById("b9").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b10").innerHTML === "❤" &&
+document.getElementById("b11").innerHTML === "❤" &&
+document.getElementById("b12").innerHTML === "❤" &&
+document.getElementById("b13").innerHTML === "❤" &&
+document.getElementById("b14").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b15").innerHTML === "❤" &&
+document.getElementById("b16").innerHTML === "❤" &&
+document.getElementById("b17").innerHTML === "❤" &&
+document.getElementById("b18").innerHTML === "❤" &&
+document.getElementById("b19").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b20").innerHTML === "❤" &&
+document.getElementById("b21").innerHTML === "❤" &&
+document.getElementById("b22").innerHTML === "❤" &&
+document.getElementById("b23").innerHTML === "❤" &&
+document.getElementById("b24").innerHTML === "❤"){alert("gana el  ❤")}
+
+//--------------VERTICALES------------------------------------------------------
+if(document.getElementById("b0").innerHTML === "❤" &&
+document.getElementById("b5").innerHTML === "❤" &&
+document.getElementById("b10").innerHTML === "❤" &&
+document.getElementById("b15").innerHTML === "❤" &&
+document.getElementById("b20").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b1").innerHTML === "❤" &&
+document.getElementById("b6").innerHTML === "❤" &&
+document.getElementById("b11").innerHTML === "❤" &&
+document.getElementById("b16").innerHTML === "❤" &&
+document.getElementById("b21").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b2").innerHTML === "❤" &&
+document.getElementById("b7").innerHTML === "❤" &&
+document.getElementById("b12").innerHTML === "❤" &&
+document.getElementById("b17").innerHTML === "❤" &&
+document.getElementById("b22").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b3").innerHTML === "❤" &&
+document.getElementById("b8").innerHTML === "❤" &&
+document.getElementById("b13").innerHTML === "❤" &&
+document.getElementById("b18").innerHTML === "❤" &&
+document.getElementById("b23").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b4").innerHTML === "❤" &&
+document.getElementById("b9").innerHTML === "❤" &&
+document.getElementById("b14").innerHTML === "❤" &&
+document.getElementById("b19").innerHTML === "❤" &&
+document.getElementById("b24").innerHTML === "❤"){alert("gana el  ❤")}
+
+//-----------DIAGONALES---------------------------------------------------------
+
+if(document.getElementById("b4").innerHTML === "❤" &&
+document.getElementById("b8").innerHTML === "❤" &&
+document.getElementById("b12").innerHTML === "❤" &&
+document.getElementById("b16").innerHTML === "❤" &&
+document.getElementById("b20").innerHTML === "❤"){alert("gana el  ❤")}
+
+if(document.getElementById("b0").innerHTML === "❤" &&
+document.getElementById("b6").innerHTML === "❤" &&
+document.getElementById("b12").innerHTML === "❤" &&
+document.getElementById("b18").innerHTML === "❤" &&
+document.getElementById("b24").innerHTML === "❤"){alert("gana el  ❤")}
+}
+
+function GanadorAzul(){
+  //-----------------HORIZONTALES-----------------------------------------------
+if(document.getElementById("b0").innerHTML === "💙" &&
+document.getElementById("b1").innerHTML === "💙" &&
+document.getElementById("b2").innerHTML === "💙" &&
+document.getElementById("b3").innerHTML === "💙" &&
+document.getElementById("b4").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b5").innerHTML === "💙" &&
+document.getElementById("b6").innerHTML === "💙" &&
+document.getElementById("b7").innerHTML === "💙" &&
+document.getElementById("b8").innerHTML === "💙" &&
+document.getElementById("b9").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b10").innerHTML === "💙" &&
+document.getElementById("b11").innerHTML === "💙" &&
+document.getElementById("b12").innerHTML === "💙" &&
+document.getElementById("b13").innerHTML === "💙" &&
+document.getElementById("b14").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b15").innerHTML === "💙" &&
+document.getElementById("b16").innerHTML === "💙" &&
+document.getElementById("b17").innerHTML === "💙" &&
+document.getElementById("b18").innerHTML === "💙" &&
+document.getElementById("b19").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b20").innerHTML === "💙" &&
+document.getElementById("b21").innerHTML === "💙" &&
+document.getElementById("b22").innerHTML === "💙" &&
+document.getElementById("b23").innerHTML === "💙" &&
+document.getElementById("b24").innerHTML === "💙"){alert("gana el  💙")}
+
+//--------------VERTICALES------------------------------------------------------
+if(document.getElementById("b0").innerHTML === "💙" &&
+document.getElementById("b5").innerHTML === "💙" &&
+document.getElementById("b10").innerHTML === "💙" &&
+document.getElementById("b15").innerHTML === "💙" &&
+document.getElementById("b20").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b1").innerHTML === "💙" &&
+document.getElementById("b6").innerHTML === "💙" &&
+document.getElementById("b11").innerHTML === "💙" &&
+document.getElementById("b16").innerHTML === "💙" &&
+document.getElementById("b21").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b2").innerHTML === "💙" &&
+document.getElementById("b7").innerHTML === "💙" &&
+document.getElementById("b12").innerHTML === "💙" &&
+document.getElementById("b17").innerHTML === "💙" &&
+document.getElementById("b22").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b3").innerHTML === "💙" &&
+document.getElementById("b8").innerHTML === "💙" &&
+document.getElementById("b13").innerHTML === "💙" &&
+document.getElementById("b18").innerHTML === "💙" &&
+document.getElementById("b23").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b4").innerHTML === "💙" &&
+document.getElementById("b9").innerHTML === "💙" &&
+document.getElementById("b14").innerHTML === "💙" &&
+document.getElementById("b19").innerHTML === "💙" &&
+document.getElementById("b24").innerHTML === "💙"){alert("gana el  💙")}
+
+//-----------DIAGONALES---------------------------------------------------------
+
+if(document.getElementById("b4").innerHTML === "💙" &&
+document.getElementById("b8").innerHTML === "💙" &&
+document.getElementById("b12").innerHTML === "💙" &&
+document.getElementById("b16").innerHTML === "💙" &&
+document.getElementById("b20").innerHTML === "💙"){alert("gana el  💙")}
+
+if(document.getElementById("b0").innerHTML === "💙" &&
+document.getElementById("b6").innerHTML === "💙" &&
+document.getElementById("b12").innerHTML === "💙" &&
+document.getElementById("b18").innerHTML === "💙" &&
+document.getElementById("b24").innerHTML === "💙"){alert("gana el  💙")}
+}
+
+
+</script>
+</body>
+</html>
